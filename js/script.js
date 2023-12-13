@@ -7,18 +7,18 @@ const new_todo = document.querySelector(".new-todo")
 //  'input' 
 //  'keyup'
 
-new_todo.addEventListener('keyup', new_todo_click_handler)
+// new_todo.addEventListener('keyup', new_todo_click_handler)
 
-function new_todo_click_handler(e) {
+// function new_todo_click_handler(e) {
   
-  if(e.key === 'Enter') {
-    console.dir(new_todo.value);
-    if(new_todo.value === "hello"){
-      console.log("hello")
-    }
-  }
+//   if(e.key === 'Enter') {
+//     console.dir(new_todo.value);
+//     if(new_todo.value === "hello"){
+//       console.log("hello")
+//     }
+//   }
  
-}
+// }
 
 // // 변수 지정후 document.querySelector로 document 에 css 를 불러온다
 // const new_active = document.querySelector(".filters > li:nth-child(2) > a"); 
@@ -36,11 +36,25 @@ const element = document.createElement('p')
 
 
 // element.innerText = "<h1>wjd</h1>"
-element.innerHTML = "<h6>wjhgvhfgvhfgvhd</h6>"
-console.log(element);
+// element.innerHTML = "<h6>wjhgvhfgvhfgvhd</h6>"
+// console.log(element);
 
 
-document.body.append(element)
+// document.body.append(element)
 
+new_todo.addEventListener('keyup', new_todo_click_handler)
+const new_view = document.querySelector(".view")
+let todos =[];
+
+const fetchTodos = () => {
+  todos = JASON.parse(localStorage.getItem("todos")) || [] ;
+}
+
+function new_todo_click_handler(e) {
+
+  if(e.key === 'Enter') {
+  }
+ 
+}
 
 
